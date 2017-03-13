@@ -14,7 +14,7 @@ BEGIN {
 
 my $FPROOT = "$FindBin::RealBin";
 my $all;
-my $prep_genbank = "gunzip ".$FPROOT."/bin/GenBank_Plastomes.gz";
+my $prep_genbank = "gunzip ".$FPROOT."/bin/GenBank_MtGenomes.gz";
 system($prep_genbank);
 print "Thank you for dowloading the Fast-Plast pipeline. If you have not looked at the dependencies for Fast-Plast, please visit https://github.com/mrmckain/Fast-Plast and download them.\n\n";
 
@@ -23,7 +23,7 @@ print "Do you have all dependecies installed? Yes/No: ";
 
 my $answer = <STDIN>;
 chomp ($answer);
-my $control_file =$FPROOT . "/fast-plast.pl";
+my $control_file =$FPROOT . "/quick-mit.pl";
 if($answer =~ /n/i){
 
 	print "\nDo you want me to try to install them? Yes/No/All: ";
